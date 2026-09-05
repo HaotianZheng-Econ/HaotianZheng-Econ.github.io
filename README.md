@@ -11,15 +11,9 @@ A lightweight, responsive academic website for GitHub Pages. The publishable fil
 
 The published site address is `https://haotianzheng-econ.github.io/`.
 
-## Personalise before publishing
+## Future updates
 
-- Replace the monogram in `index.html` with a headshot if desired. Put an optimised image at `profile.webp`, then replace the `portrait-card` block with:
-
-```html
-<figure class="profile-photo">
-  <img src="./profile.webp" alt="Portrait of Haotian Zheng">
-</figure>
-```
+- The current portrait is `profile.webp`; replace that file with an optimised image of the same name to update it.
 
 - Add confirmed Google Scholar and long-term email links to the contact line.
 - The GitHub username and public URL are already included in the metadata.
@@ -33,6 +27,7 @@ index.html        Academic homepage
 cv.html           Public, printable CV
 styles.css        Shared responsive styles
 favicon.svg       Site icon
+profile.webp      Profile portrait
 robots.txt        Search-engine crawling rules
 sitemap.xml       Site map
 ```
