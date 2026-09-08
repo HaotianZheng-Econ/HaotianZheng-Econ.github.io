@@ -1,0 +1,41 @@
+/* CV-only styling; homepage and portrait styles remain unchanged. */
+.cv-shell { max-width: 58rem; padding: clamp(1.25rem, 5vw, 3.5rem); }
+.cv-title { display: block; padding-bottom: 1.25rem; }
+.cv-title h1 { font-size: clamp(2.3rem, 5vw, 3rem); }
+.cv-contact { align-items: flex-start; flex-direction: row; flex-wrap: wrap; gap: .2rem 1.25rem; font-size: .9rem; overflow-wrap: anywhere; }
+.cv-section { display: block; padding: 1.4rem 0; }
+.cv-section > h2 { font-size: 1.2rem; margin-bottom: .85rem; }
+.cv-section p { margin-bottom: .35rem; }
+.cv-entry { grid-template-columns: 9.75rem minmax(0, 1fr); gap: 1rem; padding-bottom: .9rem; }
+.cv-entry h3, .cv-paper h3 { font-size: 1rem; }
+.cv-date { font-size: .875rem; }
+.cv-publication-list li + li { margin-top: .7rem; }
+.cv-simple-list li { grid-template-columns: 8.5rem minmax(0, 1fr); padding: .35rem 0; }
+.cv-simple-list span { font-size: .875rem; }
+.cv-project-note { margin-bottom: .8rem !important; }
+.cv-toolbar-inner .cv-download { display: inline-flex; align-items: center; min-height: 2.75rem; padding: .65rem .9rem; color: white; background: var(--accent); font: 600 .875rem/1.4 var(--sans); text-decoration: none; border-radius: .25rem; }
+.cv-download:hover, .cv-download:focus-visible { background: var(--accent-dark); }
+@media (max-width: 600px) {
+  .cv-shell { width: calc(100% - 1rem); margin-top: 1rem; }
+  .cv-toolbar-inner { width: calc(100% - 1.5rem); flex-wrap: wrap; padding: .65rem 0; gap: .5rem; }
+  .cv-entry { grid-template-columns: 1fr; gap: .1rem; }
+  .cv-contact { flex-direction: column; }
+  .cv-simple-list li { grid-template-columns: 1fr; gap: .05rem; }
+}
+@media print {
+  @page { size: A4; margin: 18mm; }
+  .cv-page { font: 10pt/1.32 Georgia, 'Times New Roman', serif; }
+  .cv-shell { max-width: none; width: 100%; margin: 0; padding: 0; }
+  .cv-title { padding-bottom: 4mm; }
+  .cv-title h1 { font-size: 25pt; }
+  .cv-contact { flex-direction: row; font-size: 8.5pt; gap: 1mm 4mm; }
+  .cv-section { display: block; padding: 3mm 0; break-inside: auto; }
+  .cv-section > h2 { font-size: 12pt; margin-bottom: 2mm; break-after: avoid; }
+  .cv-section p { margin-bottom: 1mm; }
+  .cv-entry { display: grid; grid-template-columns: 32mm minmax(0, 1fr); gap: 3mm; padding-bottom: 2mm; break-inside: avoid; }
+  .cv-entry h3, .cv-paper h3 { font-size: 10pt; }
+  .cv-date, .cv-simple-list span { font-size: 9pt; }
+  .cv-publication-list li + li { margin-top: 2mm; }
+  .cv-simple-list li { grid-template-columns: 29mm minmax(0, 1fr); padding: 2mm 0; }
+  .cv-second-page { break-before: page; padding-top: 0; }
+}
